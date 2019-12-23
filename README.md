@@ -1,1 +1,1 @@
-Functional automation testScripts using UI.Vision RPA.
+Functional automation test scripts using UI.Vision RPA.
