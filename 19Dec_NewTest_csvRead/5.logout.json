@@ -1,0 +1,26 @@
+{
+  "Name": "5.logout",
+  "CreationDate": "2019-12-18",
+  "Commands": [
+    {
+      "Command": "comment",
+      "Target": "Log out",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//img[@class='s-pic']",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "xpath=//button[contains(.,'Logout')]",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Logged out Successfully",
+      "Value": "#shownotification"
+    }
+  ]
+}

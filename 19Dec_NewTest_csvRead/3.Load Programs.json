@@ -1,0 +1,21 @@
+{
+  "Name": "3.Load Programs",
+  "CreationDate": "2019-12-19",
+  "Commands": [
+    {
+      "Command": "click",
+      "Target": "xpath=//span[contains(.,'Programs')]",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Load Programs Successfully",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "pause",
+      "Target": "5000",
+      "Value": ""
+    }
+  ]
+}

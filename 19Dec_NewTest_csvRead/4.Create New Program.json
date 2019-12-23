@@ -1,0 +1,176 @@
+{
+  "Name": "4.Create New Program",
+  "CreationDate": "2019-12-19",
+  "Commands": [
+    {
+      "Command": "refresh",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "4",
+      "Value": "!csvReadLineNumber"
+    },
+    {
+      "Command": "csvRead",
+      "Target": "user.csv",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "store New Program Name.",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${!COL2}",
+      "Value": "nodeName"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//li[@role='treeitem' and @aria-level='1']/a",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//li[@role='treeitem' and @aria-level='1']/ul/li[last()]/a",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//li[@role='treeitem' and @aria-level='2']/ul/li[last()]/a",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//li[@role='treeitem' and @aria-level='3']/ul/li[last()]/a",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//li[@role='treeitem' and @aria-level='4']/ul/li[last()]/a",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//li[@role='treeitem' and @aria-level='5']/ul/li[last()]/a",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(.,'Create')]",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//input[contains(@value,'new node')]",
+      "Value": "${nodeName}"
+    },
+    {
+      "Command": "comment",
+      "Target": "Saving New Program",
+      "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "xpath=//button[contains(.,'Save')]",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "40",
+      "Value": "!TIMEOUT_WAIT"
+    },
+    {
+      "Command": "comment",
+      "Target": "Verify if the toast container presents.",
+      "Value": "Saved successfully"
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[@id=\"toast-container\"]/div/div",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "Capture screenshot of Notification.",
+      "Value": "Saved successfully"
+    },
+    {
+      "Command": "storeImage",
+      "Target": "xpath=//*[@id=\"toast-container\"]/div/div",
+      "Value": "CaptureSaveNotification"
+    },
+    {
+      "Command": "comment",
+      "Target": "Verify if the text contains \"Save\"",
+      "Value": "Saved successfully"
+    },
+    {
+      "Command": "verifyText",
+      "Target": "xpath=//div[contains(@class,'toast-message')]",
+      "Value": "Save*"
+    },
+    {
+      "Command": "assertElementPresent",
+      "Target": "xpath=//li[@role='treeitem' and @aria-level='5']/ul/li[last()]/ul/li/a[text()='${nodeName}']",
+      "Value": "${nodeName}"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK}",
+      "Value": ""
+    },
+    {
+      "Command": "storeImage",
+      "Target": "xpath=//div[contains(@class,'wbox')]",
+      "Value": "CaptureSavedProgram'sPresent"
+    },
+    {
+      "Command": "comment",
+      "Target": "New node Validation",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Successfully created program ${nodeName}",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "comment",
+      "Target": "Verify if the New Program is created in appropriate place",
+      "Value": "Saved successfully"
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "Capture screenshot of New Program",
+      "Value": "Saved successfully"
+    },
+    {
+      "Command": "echo",
+      "Target": "Failed to create Program \"${nodeName}\" ",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "",
+      "Value": ""
+    }
+  ]
+}

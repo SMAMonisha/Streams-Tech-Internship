@@ -1,0 +1,21 @@
+{
+  "Name": "2.load isOrganizer-Implementation Plan.",
+  "CreationDate": "2019-12-18",
+  "Commands": [
+    {
+      "Command": "clickAndWait",
+      "Target": "xpath=(//a[contains(.,'iSOrganizer-Implementation Plan (DIP)')])[3]",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Load is Organizer_implementation successfully!",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "pause",
+      "Target": "4000",
+      "Value": ""
+    }
+  ]
+}

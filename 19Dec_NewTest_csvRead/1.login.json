@@ -1,0 +1,76 @@
+{
+  "Name": "1.login",
+  "CreationDate": "2019-12-19",
+  "Commands": [
+    {
+      "Command": "bringBrowserToForeground",
+      "Target": "-",
+      "Value": "-"
+    },
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "!csvReadLineNumber"
+    },
+    {
+      "Command": "csvRead",
+      "Target": "user.csv",
+      "Value": ""
+    },
+    {
+      "Command": "open",
+      "Target": "${!COL2}",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "2",
+      "Value": "!csvReadLineNumber"
+    },
+    {
+      "Command": "csvRead",
+      "Target": "user.csv",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=Username",
+      "Value": "${!COL2}"
+    },
+    {
+      "Command": "comment",
+      "Target": "Read Username & Password from user.csv",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "3",
+      "Value": "!csvReadLineNumber"
+    },
+    {
+      "Command": "csvRead",
+      "Target": "user.csv",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=Password",
+      "Value": "${!COL2}"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "xpath=//*[@id=\"loginBox\"]/form/p/button",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Logged In Successfully!",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "pause",
+      "Target": "4000",
+      "Value": ""
+    }
+  ]
+}
