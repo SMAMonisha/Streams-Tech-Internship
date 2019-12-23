@@ -1,0 +1,11 @@
+1. Comment
+2. Echo
+3. Assertion/Validation
+4. Use variables instead of hard coded inputs
+5. Read from CSV to make dynamic
+6. Use enough "Pause"
+7. bringBrowserToForegorund
+8. Refresh
+9. Make element locator fool-proof so that it works in most cases.
+10. Use !Timeout_Wait where required
+11. OnError (Exception handling)
