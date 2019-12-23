@@ -1,0 +1,201 @@
+{
+  "Name": "3.Exit Enrolled Member",
+  "CreationDate": "2019-12-22",
+  "Commands": [
+    {
+      "Command": "comment",
+      "Target": "Macro: Exit Enrolled Member from Web",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Exiting enrolled member MemberName from Web",
+      "Value": ""
+    },
+    {
+      "Command": "refresh",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1500",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "Impact Program",
+      "Value": "globalProgramName"
+    },
+    {
+      "Command": "store",
+      "Target": "Rupen chakma",
+      "Value": "globalApprovedMemberName"
+    },
+    {
+      "Command": "store",
+      "Target": "31499201-*Akhong Ziree",
+      "Value": "globalCatchmentName"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//span[contains(text(),'Exit Member')]",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3500",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(.,'Select Program Component')]",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=(//input[@type='search'])[1]",
+      "Value": "${globalProgramName}"
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "linkText=${globalProgramName}",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "click // xpath=//a[contains(.,\"${globalProgramName}\")]",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(.,'Select Catchment')]",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=(//input[@type='search'])[2]",
+      "Value": "${globalCatchmentName}"
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "linkText=${globalCatchmentName}",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "click // xpath=//a[contains(.,'Akhong')]",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//button[contains(.,'Show Members')]",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=searchinput",
+      "Value": "chakma"
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//div[@class='ui-grid-canvas']/div/div/div[1][contains(.,'${globalApprovedMemberName}')]",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!LastCommandOK}",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " '${globalApprovedMemberName}' is found",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "XClick",
+      "Target": "xpath=(//div[@role='checkbox'])[count(//div[@class='ui-grid-canvas']/div/div/div[1][contains(.,'${globalApprovedMemberName}')]/../../preceding-sibling::div)+1]",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "3000",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Successfully selected '${globalApprovedMemberName}'",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "click",
+      "Target": "//button[@class='btn btn-default']",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//button[@type='button'][contains(.,'Today')]",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "name=exit",
+      "Value": "5897"
+    },
+    {
+      "Command": "click",
+      "Target": "name=exit",
+      "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "//button[@class='btn btn-danger'][contains(.,'Exit')]",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Member ${globalApprovedMemberName}' has been Exited successfully!!",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": " '${globalApprovedMemberName}' is not found",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    }
+  ]
+}
