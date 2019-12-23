@@ -1,1 +1,1 @@
-Streams-Tech-Internship
+Functional automation test scripts using UI.Vision RPA.
